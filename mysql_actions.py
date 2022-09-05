@@ -21,6 +21,7 @@ class MysqlActions:
         try:
             # Connecting to MySQL database
             self.__conn = MySQLConnection(**db_config)
+            #self.__conn.cmd_init_db()
 
             if self.__conn.is_connected():
                 self.status_con = 'connected'
